@@ -1,0 +1,32 @@
+GET http://localhost:3000/places?text=rua dr pedro eggler, monte alverne, santa cruz do sul, 607
+###
+GET http://localhost:3000/places?text=avenida independencia, bairro universitario, unisc, santa cruz do sul
+
+###
+@originId = EkhSLiBEci4gUGVkcm8gRWdnbGVyLCA2MDcgLSBNb250ZSBBbHZlcm5lLCBTYW50YSBDcnV6IGRvIFN1bCAtIFJTLCBCcmFzaWwiMRIvChQKEgktM4pTo5UclRFaf1jpZ-ZEexDfBCoUChIJBbnprriVHJURJALCBv0aHMk
+@destinationId = ChIJpXBG6K68HJURMeRdQsFJjtM
+###
+GET http://localhost:3000/directions?originId={{originId}}&destinationId={{destinationId}}
+
+###
+
+POST http://localhost:3000/routes
+Content-Type: application/json
+
+{
+    "name": "Monte Alverne a UNISC",
+    "source_id": "{{originId}}",
+    "destination_id": "{{destinationId}}"
+}
+
+###
+
+POST http://localhost:3000/routes/67ed262088ae23d7d9c45588/start
+
+###
+
+GET http://localhost:3000/routes
+
+###
+
+GET http://localhost:3000/routes/67a61c51351f249c332fa6ed
