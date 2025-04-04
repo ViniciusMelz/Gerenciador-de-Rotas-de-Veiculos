@@ -1,3 +1,5 @@
+Projeto criado durante o curso de imersão Full Cycle, usando NextJS, NestJS, Golang, Kafka e MongoDB para armazenamento dos dados.
+
 Para subir o projeto de o comando abaixo para subir os containers:
 docker compose up -d
 
